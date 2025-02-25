@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style1.css" />
+    <title>Due Diligence Discussions</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+
+        header {
+            background: linear-gradient(to right, #007bff, #00d4ff);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav button {
+            background: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav button a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        nav button:hover {
+            background: #007bff;
+        }
+
+        nav button:hover a {
+            color: white;
+        }
+
+
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2,
+        h3 {
+            color: #007bff;
+        }
+
+        p,
+        label {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Manage Your Projects Successfully & With Confidence</h1>
+        <nav>
+            <!-- The anchor tag to create hyper links -->
+            <!-- href is an attribute that specifies the URL to which the link points -->
+            <button>
+                <a href="index.html"> Main Page </a>
+            </button>
+            <button>
+                <a href="organiseMeeting.html"> Invite Participants</a>
+            </button>
+
+        </nav>
+
+    </header>
+    <main>
+        <article>
+            <h2> Meeting Details </h2>
+            <form id="dueDiligenceForm">
+                <section>
+                    <h3> Meeting Admin Details </h3>
+
+                    <div>
+                        <label for="date">Date:</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div>
+                        <label for="time">Time:</label>
+                        <input type="time" id="time" required>
+                    </div>
+
+                    <div>
+                        <label for="location">Meeting Location:</label>
+                        <textarea id="location" placeholder="Enter the location of the meeting" required></textarea>
+                    </div>
+
+                    <div>
+                        <label for="meeting-name">Meeting Name:</label>
+                        <textarea id="meeting-name" placeholder="Enter the Name of the Meeting" required></textarea>
+                    </div>
+
+                    <div>
+                        <label for="meeting-number">Meeting Number:</label>
+                        <input type="number" id="meeting-number" min="1" max="100" value="1" required>
+                    </div>
+
+                </section>
+                <section>
+                    <h3> Meeting Questions and Answers </h3>
+                    <div>
+                        <div>
+                            <label for="discussion-topic">What are We Trying to Achieve by this Initiative?</label>
+                            <textarea id="discussion-topic"
+                                placeholder="Enter your thoughts or objectives for this initiative" required>
+            </textarea>
+                        </div>
+                        <div>
+                            <label for="discussion-minutes">Minutes for Topic:</label>
+                            <input type="number" id="discussion-minutes" name="discussion-minutes" min="0" max="60"
+                                value="0" required>
+                            <button type="button" id="start-timer">Start Timer</button>
+                            <p id="timer-display">Time Left: 0:00</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <label for="discussion-topic-2">Why Are We Pursuing Such Initiative? What Are the
+                                Benefits?</label>
+                            <textarea id="discussion-topic-2"
+                                placeholder="Enter your reasons and expected benefits for this initiative" required>
+          </textarea>
+                        </div>
+                        <div>
+                            <label for="discussion-minutes-2">Minutes for Topic:</label>
+                            <input type="number" id="discussion-minutes-2" name="discussion-minutes-2" min="0" max="60"
+                                value="0" required>
+                            <button type="button" id="start-timer-2">Start Timer</button>
+                            <p id="timer-display-2">Time Left: 0:00</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <label for="discussion-topic-3">What Are the Criteria of Success?</label>
+                            <textarea id="discussion-topic-3"
+                                placeholder="Enter the criteria for determining success of this initiative" required>
+        </textarea>
+                        </div>
+                        <div>
+                            <label for="discussion-minutes-3">Minutes for Topic:</label>
+                            <input type="number" id="discussion-minutes-3" name="discussion-minutes-3" min="0" max="60"
+                                value="0" required>
+                            <button type="button" id="start-timer-3">Start Timer</button>
+                            <p id="timer-display-3">Time Left: 0:00</p>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section id="listOfStakeholders">
+                    <h3> List of Stakeholders </h3>
+                    <!-- Stakeholder Discussion -->
+                    <div>
+                        <label for="stakeholder-name">Name of Stakeholder:</label>
+                        <input type="text" id="stakeholder-name" name="stakeholder-name"
+                            placeholder="Enter stakeholder's name" required>
+                    </div>
+
+                    <div>
+                        <label for="stakeholder-department">Department:</label>
+                        <input type="text" id="stakeholder-department" name="stakeholder-department"
+                            placeholder="Enter stakeholder's department" required>
+                    </div>
+
+                    <div>
+                        <label for="stakeholder-role">Role:</label>
+                        <select id="stakeholder-role" name="stakeholder-role" required>
+                            <option value="">Select Role</option>
+                            <option value="beneficiary">Beneficiary</option>
+                            <option value="external-consultant">External Consultant</option>
+                            <option value="delivery-team">Delivery Team</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <button id="addStakeholderButton">Add Stakeholder</button>
+                </section>
+                <button id="createPdfButton">Create PDF</button>
+            </form>
+
+        </article>
+
+    </main>
+
+
+
+    <footer>
+        <h2> © Take Your First Steps Towards Successful Project Management</h2>
+    </footer>
+
+    <script src="assets/js/script1.js"></script>
+    <script src="assets/js/script2.js"></script>
+
+
+
+
+    <script src="assets/js/script3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="assets/js/script4.js"></script>
+
+</body>
+
+</html>

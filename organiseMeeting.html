@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Invite Participants</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+
+        header {
+            background: linear-gradient(to right, #007bff, #00d4ff);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav button {
+            background: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav button a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        nav button:hover {
+            background: #007bff;
+        }
+
+        nav button:hover a {
+            color: white;
+        }
+
+
+        section img {
+            display: block;
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            margin: 20px auto;
+            border-radius: 8px;
+        }
+
+
+        section {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h3,
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            color: #007bff;
+            margin-top: 20px;
+        }
+
+        p,
+        label {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        strong {
+            color: #007bff;
+        }
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        form div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input,
+        textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <!-- The anchor tag to create hyper links -->
+            <!-- href is an attribute that specifies the URL to which the link points -->
+            <button>
+                <a href="index.html"> Main Page </a>
+            </button>
+            <button>
+                <a href="dueDiligence.html"> Due Diligence</a>
+            </button>
+
+        </nav>
+
+    </header>
+
+    <section>
+        <form id="meetingForm">
+            <div>
+                <label for="purpose">Purpose of the Meeting:</label>
+                <textarea id="purpose" placeholder="Enter the purpose of the meeting" required></textarea>
+            </div>
+            <div>
+                <label for="location">Meeting Location:</label>
+                <textarea id="location" placeholder="Enter the location of the meeting" required></textarea>
+            </div>
+            <div>
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+            </div>
+            <div>
+                <label for="time">Time:</label>
+                <input type="time" id="time" required>
+            </div>
+            <div id="participants">
+                <h2>Participants</h2>
+                <div class="participant">
+                    <label>Name:</label>
+                    <input type="text" placeholder="Participant's Name" class="participantName" required>
+                    <label>Email:</label>
+                    <input type="email" placeholder="Participant's Email" class="participantEmail" required>
+                </div>
+            </div>
+            <button type="button" id="addParticipant">Add Participant</button>
+            <button type="submit">Submit</button>
+            <button id="generate-pdf">Generate PDF</button>
+
+        </form>
+    </section>
+
+
+
+
+
+    <!-- <footer style="position: fixed;" > -->
+    <footer>
+
+        <h2> © Take Your First Steps Towards Successful Project Management</h2>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+</body>
+
+</html>
